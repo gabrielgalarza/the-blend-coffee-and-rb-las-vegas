@@ -7,7 +7,7 @@ does not:
 
   1. Namespaced classes. Webflow's theme defines .line, .btn, .container,
      .card, .hero, .gallery, .h2 and .text-center, and we share all eight
-     names. Scoping under #blend-la is NOT enough: specificity only picks a
+     names. Scoping under #blend-vegas is NOT enough: specificity only picks a
      winner when both stylesheets declare the same property, so wherever ours
      is silent Webflow's rule applies unopposed. (This shipped a broken hero
      once: Webflow's `.line { height: 1px }` is a divider style, our title
@@ -30,8 +30,8 @@ import os
 import re
 import sys
 
-BASE = "https://gabrielgalarza.github.io/the-blend-coffee-and-rb-los-angeles/"
-SCOPE = "#blend-la"
+BASE = "https://gabrielgalarza.github.io/the-blend-coffee-and-rb-las-vegas/"
+SCOPE = "#blend-vegas"
 PREFIX = "b-"
 OUT = "webflow-embed.html"
 
@@ -103,7 +103,7 @@ def scope_css(s):
             res.append(prelude)
             continue
         # Peel leading comments BEFORE classifying, or a commented at-rule
-        # gets scoped into invalid "#blend-la @media {...}".
+        # gets scoped into invalid "#blend-vegas @media {...}".
         m = re.match(r"^(\s*(?:/\*.*?\*/\s*)*)(.*)$", prelude, re.S)
         lead, sel = m.group(1), m.group(2).strip()
         if sel.startswith(("@keyframes", "@-webkit-keyframes", "@font-face")):
@@ -153,11 +153,11 @@ def main():
     ver = ver.group(1) if ver else "1"
 
     snippet = (
-        "<!-- The Blend LA -->\n"
+        "<!-- The Blend Vegas -->\n"
         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
         "family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap\">\n"
         '<link rel="stylesheet" href="%sembed.css?v=%s">\n\n'
-        '<div id="blend-la">\n%s\n</div>\n\n'
+        '<div id="blend-vegas">\n%s\n</div>\n\n'
         '<script src="%sembed.js?v=%s"></script>\n'
     ) % (BASE, ver, body.strip(), BASE, ver)
     write(OUT, snippet)
@@ -172,7 +172,9 @@ def main():
     if leftovers:
         print("WARNING un-namespaced classes:", leftovers)
         return 1
-    if "#blend-la @" in read("embed.css"):
+    if "SWEATPALS_WAITLIST_URL" in snippet:
+        print("WARNING waitlist URL is still the placeholder")
+    if SCOPE + " @" in read("embed.css"):
         print("WARNING mangled at-rule in embed.css")
         return 1
     print("ok - paste %s into the Webflow Code Embed, and push embed.css/embed.js" % OUT)

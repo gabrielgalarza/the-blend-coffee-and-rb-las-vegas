@@ -1,18 +1,10 @@
-// Tappable programming cards: toggle .is-open, fire Amplitude event
+// Tappable programming cards: toggle .is-open
 document.querySelectorAll('[data-card]').forEach((card) => {
   card.addEventListener('click', (e) => {
     if (e.target.closest('a')) return;
     if (e.target.closest('.rail__nav')) return;
     if (card.hasAttribute('aria-hidden')) return;
-    const wasOpen = card.classList.contains('is-open');
     card.classList.toggle('is-open');
-
-    if (!wasOpen && window.amplitude) {
-      const title = card.querySelector('.card__title');
-      window.amplitude.track('programming_card_expanded', {
-        zone: title ? title.textContent.trim() : 'unknown'
-      });
-    }
   });
 });
 
@@ -139,48 +131,18 @@ document.querySelectorAll('.partner, .stat, .aud, .vendor').forEach((el) => {
   io.observe(el);
 });
 
-// Custom Amplitude tracking for high-signal interactions
-(function () {
-  function track(name, props) {
-    if (window.amplitude && typeof window.amplitude.track === 'function') {
-      window.amplitude.track(name, props || {});
-    }
-  }
-  function metaTrack(name, props) {
+// Meta Pixel: waitlist CTA clicks. The links leave for the SweatPals waitlist,
+// so this is the only place signup intent is recorded. (The LA site also called
+// window.amplitude, but no Amplitude snippet was ever loaded, so those events
+// were silently dropped. Removed rather than carried over.)
+document.querySelectorAll('[data-register]').forEach((el) => {
+  el.addEventListener('click', () => {
     if (typeof window.fbq === 'function') {
-      window.fbq('track', name, props || {});
-    }
-  }
-
-  // Register CTA clicks. The links go straight to the Sweatpals event page,
-  // so this is the only place registration intent is recorded.
-  document.querySelectorAll('[data-register]').forEach((el) => {
-    el.addEventListener('click', () => {
       const section = el.closest('section');
-      track('cta_register_clicked', {
-        location: section ? section.id || 'unknown' : 'nav',
-        text: el.textContent.trim()
+      window.fbq('track', 'Lead', {
+        content_name: 'The Blend Vegas Waitlist',
+        content_category: section ? section.id || 'unknown' : 'nav'
       });
-      metaTrack('Lead', { content_name: 'The Blend LA Register' });
-    });
+    }
   });
-
-  // Nav link clicks (which sections people are jumping to)
-  document.querySelectorAll('.nav__links a').forEach((el) => {
-    el.addEventListener('click', () => {
-      track('nav_link_clicked', { section: el.getAttribute('href') });
-    });
-  });
-
-  // Hero secondary CTA
-  const heroSee = document.querySelector('.hero__ctas a[href="#included"]');
-  if (heroSee) {
-    heroSee.addEventListener('click', () => track('hero_see_included_clicked'));
-  }
-
-  // Partner email link
-  const sponsorEmail = document.querySelector('a[href^="mailto:experienceott"]');
-  if (sponsorEmail) {
-    sponsorEmail.addEventListener('click', () => track('sponsor_email_clicked'));
-  }
-})();
+});

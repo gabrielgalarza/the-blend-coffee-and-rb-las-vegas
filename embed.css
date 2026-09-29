@@ -1,5 +1,5 @@
 /* ============ TOKENS ============ */
-#blend-la{
+#blend-vegas{
   --yellow: #FFD60A;
   --yellow-deep: #F5C400;
   --black: #0A0A0A;
@@ -23,11 +23,11 @@
   --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-#blend-la, #blend-la *{ box-sizing: border-box; }
-#blend-la, #blend-la{ margin: 0; padding: 0; }
-#blend-la{ scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+#blend-vegas, #blend-vegas *{ box-sizing: border-box; }
+#blend-vegas, #blend-vegas{ margin: 0; padding: 0; }
+#blend-vegas{ scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
-#blend-la{
+#blend-vegas{
   font-family: var(--body);
   color: var(--ink);
   background: var(--white);
@@ -36,20 +36,20 @@
   text-rendering: optimizeLegibility;
 }
 
-#blend-la img{ display: block; max-width: 100%; }
-#blend-la a{ color: inherit; }
-#blend-la button{ font: inherit; }
+#blend-vegas img{ display: block; max-width: 100%; }
+#blend-vegas a{ color: inherit; }
+#blend-vegas button{ font: inherit; }
 
 /* ============ LAYOUT HELPERS ============ */
-#blend-la .b-container{
+#blend-vegas .b-container{
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 24px;
 }
-#blend-la .b-container--narrow{ max-width: var(--container-narrow); }
-#blend-la .b-text-center{ text-align: center; }
+#blend-vegas .b-container--narrow{ max-width: var(--container-narrow); }
+#blend-vegas .b-text-center{ text-align: center; }
 
-#blend-la .b-kicker{
+#blend-vegas .b-kicker{
   display: inline-block;
   font-family: var(--display);
   font-size: 12px;
@@ -61,9 +61,9 @@
   border-radius: 999px;
   margin-bottom: 22px;
 }
-#blend-la .b-kicker--yellow{ background: var(--yellow); color: var(--black); }
+#blend-vegas .b-kicker--yellow{ background: var(--yellow); color: var(--black); }
 
-#blend-la .b-h2{
+#blend-vegas .b-h2{
   font-family: var(--display);
   font-weight: 900;
   font-size: clamp(28px, 4.5vw, 52px);
@@ -72,9 +72,9 @@
   margin: 0 0 28px;
   text-transform: uppercase;
 }
-#blend-la .b-h2--light{ color: var(--white); }
+#blend-vegas .b-h2--light{ color: var(--white); }
 
-#blend-la .b-lede{
+#blend-vegas .b-lede{
   font-size: clamp(16px, 1.6vw, 19px);
   color: var(--ink-2);
   max-width: 640px;
@@ -82,7 +82,7 @@
 }
 
 /* ============ NAV ============ */
-#blend-la .b-nav{
+#blend-vegas .b-nav{
   position: sticky;
   top: 0;
   z-index: 50;
@@ -96,7 +96,7 @@
   color: var(--white);
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
-#blend-la .b-nav__brand{
+#blend-vegas .b-nav__brand{
   display: flex;
   align-items: center;
   gap: 12px;
@@ -104,44 +104,44 @@
   font-family: var(--display);
   letter-spacing: 0.04em;
 }
-#blend-la .b-brand-mark{
+#blend-vegas .b-brand-mark{
   display: block;
   height: 32px;
   width: auto;
 }
-#blend-la .b-brand-mark--lg{ height: 60px; }
-#blend-la .b-brand-divider{
+#blend-vegas .b-brand-mark--lg{ height: 60px; }
+#blend-vegas .b-brand-divider{
   width: 1px; height: 18px;
   background: rgba(255,255,255,.25);
 }
-#blend-la .b-brand-event{
+#blend-vegas .b-brand-event{
   font-size: 13px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-#blend-la .b-nav__links{
+#blend-vegas .b-nav__links{
   display: none;
   gap: 22px;
   margin-left: auto;
 }
-#blend-la .b-nav__links a{
+#blend-vegas .b-nav__links a{
   font-size: 14px;
   font-weight: 600;
   color: rgba(255,255,255,.8);
   text-decoration: none;
 }
-#blend-la .b-nav__links a:hover{ color: var(--yellow); }
-#blend-la .b-nav .b-btn{ margin-left: auto; }
+#blend-vegas .b-nav__links a:hover{ color: var(--yellow); }
+#blend-vegas .b-nav .b-btn{ margin-left: auto; }
 @media (min-width: 880px){
-  #blend-la .b-nav__links{ display: flex; }
-  #blend-la .b-nav .b-btn{ margin-left: 0; }}
+  #blend-vegas .b-nav__links{ display: flex; }
+  #blend-vegas .b-nav .b-btn{ margin-left: 0; }}
 /* Mobile: drop sticky + z-index so the parent Webflow hamburger dropdown
    can render over our nav without a stacking-context fight. */
 @media (max-width: 879px){
-  #blend-la .b-nav{ position: static; z-index: auto; }}
+  #blend-vegas .b-nav{ position: static; z-index: auto; }}
 
 /* ============ BUTTONS ============ */
-#blend-la .b-btn{
+#blend-vegas .b-btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -158,20 +158,20 @@
   transition: transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
   white-space: nowrap;
 }
-#blend-la .b-btn:hover{ transform: translateY(-1px); }
-#blend-la .b-btn--small{ padding: 9px 14px; font-size: 12px; }
-#blend-la .b-btn--lg{ padding: 16px 26px; font-size: 14px; }
-#blend-la .b-btn--yellow{ background: var(--yellow); color: var(--black); }
-#blend-la .b-btn--yellow:hover{ background: var(--yellow-deep); }
-#blend-la .b-btn--black{ background: var(--black); color: var(--white); }
-#blend-la .b-btn--black:hover{ background: var(--ink-2); }
-#blend-la .b-btn--ghost{ background: transparent; color: var(--white); border-color: rgba(255,255,255,.6); }
-#blend-la .b-btn--ghost:hover{ background: rgba(255,255,255,.1); }
-#blend-la .b-btn--ghost-dark{ background: transparent; color: var(--black); border-color: var(--black); }
-#blend-la .b-btn--ghost-dark:hover{ background: rgba(0,0,0,.06); }
+#blend-vegas .b-btn:hover{ transform: translateY(-1px); }
+#blend-vegas .b-btn--small{ padding: 9px 14px; font-size: 12px; }
+#blend-vegas .b-btn--lg{ padding: 16px 26px; font-size: 14px; }
+#blend-vegas .b-btn--yellow{ background: var(--yellow); color: var(--black); }
+#blend-vegas .b-btn--yellow:hover{ background: var(--yellow-deep); }
+#blend-vegas .b-btn--black{ background: var(--black); color: var(--white); }
+#blend-vegas .b-btn--black:hover{ background: var(--ink-2); }
+#blend-vegas .b-btn--ghost{ background: transparent; color: var(--white); border-color: rgba(255,255,255,.6); }
+#blend-vegas .b-btn--ghost:hover{ background: rgba(255,255,255,.1); }
+#blend-vegas .b-btn--ghost-dark{ background: transparent; color: var(--black); border-color: var(--black); }
+#blend-vegas .b-btn--ghost-dark:hover{ background: rgba(0,0,0,.06); }
 
 /* ============ HERO ============ */
-#blend-la .b-hero{
+#blend-vegas .b-hero{
   position: relative;
   min-height: 90vh;
   display: flex;
@@ -179,7 +179,7 @@
   overflow: hidden;
   color: var(--white);
 }
-#blend-la .b-hero__bg{
+#blend-vegas .b-hero__bg{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -187,7 +187,7 @@
   object-fit: cover;
   z-index: 0;
 }
-#blend-la .b-hero__overlay{
+#blend-vegas .b-hero__overlay{
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -195,7 +195,7 @@
     radial-gradient(ellipse at 80% 20%, rgba(255,214,10,.18), transparent 55%),
     linear-gradient(180deg, rgba(0,0,0,.2) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.85) 100%);
 }
-#blend-la .b-hero__content{
+#blend-vegas .b-hero__content{
   position: relative;
   z-index: 2;
   width: 100%;
@@ -203,7 +203,7 @@
   margin: 0 auto;
   padding: 120px 24px 80px;
 }
-#blend-la .b-hero__eyebrow{
+#blend-vegas .b-hero__eyebrow{
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -219,11 +219,11 @@
   backdrop-filter: blur(8px);
   margin-bottom: 24px;
 }
-#blend-la .b-hero__eyebrow .b-dot{
+#blend-vegas .b-hero__eyebrow .b-dot{
   width: 8px; height: 8px; border-radius: 50%; background: var(--yellow);
   box-shadow: 0 0 0 4px rgba(255,214,10,.25);
 }
-#blend-la .b-hero__title{
+#blend-vegas .b-hero__title{
   font-family: var(--display);
   font-weight: 900;
   text-transform: uppercase;
@@ -232,34 +232,34 @@
   letter-spacing: -0.02em;
   margin: 0 0 28px;
 }
-#blend-la .b-hero__title .b-line{ display: block; }
-#blend-la .b-hero__title .b-line--yellow{ color: var(--yellow); }
-#blend-la .b-hero__title .b-line--small{
+#blend-vegas .b-hero__title .b-line{ display: block; }
+#blend-vegas .b-hero__title .b-line--yellow{ color: var(--yellow); }
+#blend-vegas .b-hero__title .b-line--small{
   font-size: clamp(16px, 1.6vw, 22px);
   letter-spacing: 0.34em;
   font-weight: 900;
   margin-top: 14px;
   color: rgba(255,255,255,.85);
 }
-#blend-la .b-hero__sub{
+#blend-vegas .b-hero__sub{
   max-width: 620px;
   font-size: clamp(15px, 1.5vw, 18px);
   color: rgba(255,255,255,.85);
   margin: 0 0 32px;
 }
-#blend-la .b-hero__ctas{
+#blend-vegas .b-hero__ctas{
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 48px;
 }
-#blend-la .b-hero__ctas .b-btn--lg, #blend-la .b-hero__ctas .b-rsvp-trigger{ min-width: 260px; }
-#blend-la .b-hero__ctas .b-rsvp-trigger .b-btn--lg{ width: 100%; min-width: 0; }
-#blend-la .b-hero__partners{
+#blend-vegas .b-hero__ctas .b-btn--lg, #blend-vegas .b-hero__ctas .b-rsvp-trigger{ min-width: 260px; }
+#blend-vegas .b-hero__ctas .b-rsvp-trigger .b-btn--lg{ width: 100%; min-width: 0; }
+#blend-vegas .b-hero__partners{
   border-top: 1px solid rgba(255,255,255,.15);
   padding-top: 22px;
 }
-#blend-la .b-hero__partners-label{
+#blend-vegas .b-hero__partners-label{
   font-family: var(--display);
   font-size: 11px;
   letter-spacing: 0.24em;
@@ -268,27 +268,27 @@
   display: block;
   margin-bottom: 12px;
 }
-#blend-la .b-hero__partners-label--social{ margin-top: 28px; }
-#blend-la .b-logo-marquee{
+#blend-vegas .b-hero__partners-label--social{ margin-top: 28px; }
+#blend-vegas .b-logo-marquee{
   width: 100%;
   max-width: 980px;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
 }
-#blend-la .b-logo-row{
+#blend-vegas .b-logo-row{
   display: flex;
   align-items: center;
   width: max-content;
   animation: logo-scroll 36s linear infinite;
 }
-#blend-la .b-logo-row:hover{ animation-play-state: paused; }
-#blend-la .b-logo-row--alt{ animation-duration: 30s; }
+#blend-vegas .b-logo-row:hover{ animation-play-state: paused; }
+#blend-vegas .b-logo-row--alt{ animation-duration: 30s; }
 @keyframes logo-scroll{
   from { transform: translateX(0); }
   to { transform: translateX(-33.333%); }
 }
-#blend-la .b-logo-row img{
+#blend-vegas .b-logo-row img{
   height: 38px;
   width: auto;
   max-width: 130px;
@@ -300,10 +300,10 @@
   opacity: 0.9;
 }
 @media (max-width: 480px){
-  #blend-la .b-logo-row img{ height: 32px; max-width: 110px; margin-right: 32px; }}
+  #blend-vegas .b-logo-row img{ height: 32px; max-width: 110px; margin-right: 32px; }}
 @media (prefers-reduced-motion: reduce){
-  #blend-la .b-logo-row, #blend-la .b-partner-track{ animation: none; }}
-#blend-la .b-hero__scroll{
+  #blend-vegas .b-logo-row, #blend-vegas .b-partner-track{ animation: none; }}
+#blend-vegas .b-hero__scroll{
   position: absolute;
   z-index: 2;
   bottom: 22px;
@@ -316,55 +316,55 @@
 }
 
 /* ============ BANDS ============ */
-#blend-la .b-band{
+#blend-vegas .b-band{
   padding: 96px 0;
   background: var(--white);
 }
-#blend-la .b-band--yellow{ background: var(--yellow); }
-#blend-la .b-band--cream{ background: var(--gray-100); }
-#blend-la .b-band--dark{ background: var(--black); color: var(--white); }
-#blend-la .b-band--dark .b-h2{ color: var(--white); }
+#blend-vegas .b-band--yellow{ background: var(--yellow); }
+#blend-vegas .b-band--cream{ background: var(--gray-100); }
+#blend-vegas .b-band--dark{ background: var(--black); color: var(--white); }
+#blend-vegas .b-band--dark .b-h2{ color: var(--white); }
 
 @media (max-width: 720px){
-  #blend-la .b-band{ padding: 72px 0; }}
+  #blend-vegas .b-band{ padding: 72px 0; }}
 
 /* ============ VISION ============ */
-#blend-la .b-vision__grid{
+#blend-vegas .b-vision__grid{
   display: grid;
   gap: 48px;
 }
-#blend-la .b-vision__copy p{ font-size: clamp(15px, 1.4vw, 17px); margin: 0 0 14px; color: var(--ink-2); }
-#blend-la .b-vision__copy strong{ background: rgba(0,0,0,.08); padding: 1px 6px; border-radius: 4px; }
-#blend-la .b-vision__stats{
+#blend-vegas .b-vision__copy p{ font-size: clamp(15px, 1.4vw, 17px); margin: 0 0 14px; color: var(--ink-2); }
+#blend-vegas .b-vision__copy strong{ background: rgba(0,0,0,.08); padding: 1px 6px; border-radius: 4px; }
+#blend-vegas .b-vision__stats{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
-#blend-la .b-stat{
+#blend-vegas .b-stat{
   background: var(--black);
   color: var(--white);
   padding: 22px 20px;
   border-radius: var(--radius);
 }
-#blend-la .b-stat__num{
+#blend-vegas .b-stat__num{
   font-family: var(--display);
   font-size: clamp(32px, 4vw, 48px);
   line-height: 1;
   color: var(--yellow);
   margin-bottom: 6px;
 }
-#blend-la .b-stat__label{
+#blend-vegas .b-stat__label{
   font-size: 13px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: rgba(255,255,255,.7);
 }
 @media (min-width: 900px){
-  #blend-la .b-vision__grid{ grid-template-columns: 1.3fr 1fr; align-items: start; gap: 72px; }
-  #blend-la .b-vision__stats{ grid-template-columns: repeat(2, 1fr); }}
+  #blend-vegas .b-vision__grid{ grid-template-columns: 1.3fr 1fr; align-items: start; gap: 72px; }
+  #blend-vegas .b-vision__stats{ grid-template-columns: repeat(2, 1fr); }}
 
 /* ============ SCHEDULE ============ */
-#blend-la .b-ros-phase-label{
+#blend-vegas .b-ros-phase-label{
   display: inline-block;
   font-family: var(--display);
   font-size: 11px;
@@ -376,24 +376,24 @@
   border-radius: 999px;
   margin: 28px 0 6px;
 }
-#blend-la .b-ros-phase-label:first-of-type{ margin-top: 8px; }
+#blend-vegas .b-ros-phase-label:first-of-type{ margin-top: 8px; }
 
 /* ============ OPERATIONAL ASKS ============ */
-#blend-la .b-ops-simple{
+#blend-vegas .b-ops-simple{
   list-style: none;
   margin: 0;
   padding: 0;
   max-width: 820px;
 }
-#blend-la .b-ops-simple li{
+#blend-vegas .b-ops-simple li{
   display: flex;
   align-items: flex-start;
   gap: 18px;
   padding: 22px 0;
   border-top: 1px solid var(--gray-200);
 }
-#blend-la .b-ops-simple li:first-child{ border-top: none; padding-top: 4px; }
-#blend-la .b-ops-simple h4{
+#blend-vegas .b-ops-simple li:first-child{ border-top: none; padding-top: 4px; }
+#blend-vegas .b-ops-simple h4{
   font-family: var(--display);
   font-size: clamp(18px, 2vw, 22px);
   text-transform: uppercase;
@@ -401,13 +401,13 @@
   margin: 0 0 6px;
   color: var(--ink);
 }
-#blend-la .b-ops-simple p{
+#blend-vegas .b-ops-simple p{
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
   color: var(--gray-500);
 }
-#blend-la .b-ops-status{
+#blend-vegas .b-ops-status{
   display: inline-block;
   flex-shrink: 0;
   width: 12px;
@@ -417,12 +417,12 @@
   background: var(--gray-500);
   box-shadow: 0 0 0 3px rgba(0,0,0,.04);
 }
-#blend-la .b-ops-status.b-is-confirmed{ background: #34C759; }
-#blend-la .b-ops-status.b-is-pending{ background: var(--yellow); }
-#blend-la .b-ops-status.b-is-open{ background: #FF453A; }
+#blend-vegas .b-ops-status.b-is-confirmed{ background: #34C759; }
+#blend-vegas .b-ops-status.b-is-pending{ background: var(--yellow); }
+#blend-vegas .b-ops-status.b-is-open{ background: #FF453A; }
 
 /* ============ VENUE / SITE MAP ============ */
-#blend-la .b-venue-map{
+#blend-vegas .b-venue-map{
   margin: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -430,12 +430,12 @@
   border: 1px solid var(--gray-200);
   box-shadow: var(--shadow-md);
 }
-#blend-la .b-venue-map img{
+#blend-vegas .b-venue-map img{
   width: 100%;
   height: auto;
   display: block;
 }
-#blend-la .b-venue-map figcaption{
+#blend-vegas .b-venue-map figcaption{
   font-family: var(--body);
   font-size: 13px;
   color: var(--gray-500);
@@ -444,19 +444,19 @@
   background: var(--white);
   letter-spacing: 0.04em;
 }
-#blend-la .b-venue-cta{
+#blend-vegas .b-venue-cta{
   text-align: center;
   margin-top: 28px;
 }
 
-#blend-la .b-schedule{
+#blend-vegas .b-schedule{
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   gap: 0;
 }
-#blend-la .b-schedule li{
+#blend-vegas .b-schedule li{
   display: grid;
   grid-template-columns: 110px 1fr;
   align-items: baseline;
@@ -464,22 +464,22 @@
   border-bottom: 1px solid rgba(255,255,255,.1);
   gap: 16px;
 }
-#blend-la .b-schedule li:last-child{ border-bottom: none; }
-#blend-la .b-schedule__time{
+#blend-vegas .b-schedule li:last-child{ border-bottom: none; }
+#blend-vegas .b-schedule__time{
   font-family: var(--display);
   font-size: 14px;
   letter-spacing: 0.08em;
   color: var(--yellow);
   text-transform: uppercase;
 }
-#blend-la .b-schedule__title{
+#blend-vegas .b-schedule__title{
   font-family: var(--display);
   font-size: clamp(18px, 2vw, 24px);
   text-transform: uppercase;
   letter-spacing: -0.005em;
   display: block;
 }
-#blend-la .b-schedule__sub{
+#blend-vegas .b-schedule__sub{
   display: block;
   font-size: 14px;
   color: rgba(255,255,255,.65);
@@ -487,15 +487,15 @@
   grid-column: 2;
 }
 @media (min-width: 720px){
-  #blend-la .b-schedule li{ grid-template-columns: 160px 1fr; }}
+  #blend-vegas .b-schedule li{ grid-template-columns: 160px 1fr; }}
 
 /* ============ PROGRAMMING GRID ============ */
-#blend-la .b-prog-grid{
+#blend-vegas .b-prog-grid{
   display: grid;
   gap: 18px;
   grid-template-columns: 1fr;
 }
-#blend-la .b-card{
+#blend-vegas .b-card{
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -504,20 +504,20 @@
   transition: transform .25s ease, box-shadow .25s ease;
   cursor: pointer;
 }
-#blend-la .b-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow-md); }
-#blend-la .b-card__img{
+#blend-vegas .b-card:hover{ transform: translateY(-3px); box-shadow: var(--shadow-md); }
+#blend-vegas .b-card__img{
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
 }
 /* Portrait shots: anchor crop to top so the subject's face is visible */
-#blend-la .b-card__img[src*="dj-sets"], #blend-la .b-card__img[src*="singalong"]{ object-position: center top; }
-#blend-la .b-card__body{
+#blend-vegas .b-card__img[src*="dj-sets"], #blend-vegas .b-card__img[src*="singalong"]{ object-position: center top; }
+#blend-vegas .b-card__body{
   position: relative;
   padding: 22px 22px 24px;
 }
-#blend-la .b-card__partner{
+#blend-vegas .b-card__partner{
   font-family: var(--display);
   font-size: 10px;
   letter-spacing: 0.06em;
@@ -529,30 +529,30 @@
   border-radius: 999px;
   margin-bottom: 12px;
 }
-#blend-la .b-card__title{
+#blend-vegas .b-card__title{
   font-family: var(--display);
   font-size: clamp(20px, 2.4vw, 26px);
   line-height: 1.05;
   margin: 0 0 6px;
   text-transform: uppercase;
 }
-#blend-la .b-card__sub{
+#blend-vegas .b-card__sub{
   font-size: 14px;
   color: var(--gray-500);
   margin: 0;
 }
-#blend-la .b-card__expand{
+#blend-vegas .b-card__expand{
   max-height: 0;
   overflow: hidden;
   transition: max-height .35s ease, margin .35s ease;
 }
-#blend-la .b-card__expand p{
+#blend-vegas .b-card__expand p{
   margin: 16px 0 0;
   font-size: 15px;
   color: var(--ink-2);
 }
-#blend-la .b-card.b-is-open .b-card__expand{ max-height: 320px; }
-#blend-la .b-card__toggle{
+#blend-vegas .b-card.b-is-open .b-card__expand{ max-height: 320px; }
+#blend-vegas .b-card__toggle{
   position: absolute;
   right: 18px;
   bottom: 18px;
@@ -570,24 +570,24 @@
   cursor: pointer;
   transition: transform .25s ease, background .25s ease;
 }
-#blend-la .b-card.b-is-open .b-card__toggle{ transform: rotate(45deg); background: var(--yellow); color: var(--black); }
-#blend-la .b-card--feature{
+#blend-vegas .b-card.b-is-open .b-card__toggle{ transform: rotate(45deg); background: var(--yellow); color: var(--black); }
+#blend-vegas .b-card--feature{
   background: var(--black);
   color: var(--white);
   border-color: var(--black);
 }
-#blend-la .b-card--feature .b-card__title{ color: var(--white); }
-#blend-la .b-card--feature .b-card__sub{ color: rgba(255,255,255,.7); }
-#blend-la .b-card--feature .b-card__expand p{ color: rgba(255,255,255,.85); }
-#blend-la .b-card--feature .b-card__toggle{ background: var(--yellow); color: var(--black); }
+#blend-vegas .b-card--feature .b-card__title{ color: var(--white); }
+#blend-vegas .b-card--feature .b-card__sub{ color: rgba(255,255,255,.7); }
+#blend-vegas .b-card--feature .b-card__expand p{ color: rgba(255,255,255,.85); }
+#blend-vegas .b-card--feature .b-card__toggle{ background: var(--yellow); color: var(--black); }
 
 @media (min-width: 700px){
-  #blend-la .b-prog-grid{ grid-template-columns: 1fr 1fr; }}
+  #blend-vegas .b-prog-grid{ grid-template-columns: 1fr 1fr; }}
 @media (min-width: 1080px){
-  #blend-la .b-prog-grid{ grid-template-columns: repeat(3, 1fr); }}
+  #blend-vegas .b-prog-grid{ grid-template-columns: repeat(3, 1fr); }}
 /* Mobile: swipeable horizontal carousel instead of a long vertical stack */
 @media (max-width: 699px){
-  #blend-la .b-prog-grid{
+  #blend-vegas .b-prog-grid{
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -596,19 +596,19 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
-  #blend-la .b-prog-grid::-webkit-scrollbar{ display: none; }
-  #blend-la .b-prog-grid > .b-card{
+  #blend-vegas .b-prog-grid::-webkit-scrollbar{ display: none; }
+  #blend-vegas .b-prog-grid > .b-card{
     flex: 0 0 86%;
     scroll-snap-align: start;
     align-self: flex-start;
   }}
 
 /* ============ RAIL (contained scroll carousel with arrows) ============ */
-#blend-la .b-rail{
+#blend-vegas .b-rail{
   position: relative;
   margin-top: 12px;
 }
-#blend-la .b-rail__viewport{
+#blend-vegas .b-rail__viewport{
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -619,21 +619,21 @@
   mask-image: linear-gradient(to right, transparent, #000 2.5%, #000 97.5%, transparent);
   padding: 8px 0 16px;
 }
-#blend-la .b-rail__viewport::-webkit-scrollbar{ display: none; }
-#blend-la .b-rail__track{
+#blend-vegas .b-rail__viewport::-webkit-scrollbar{ display: none; }
+#blend-vegas .b-rail__track{
   display: flex;
   gap: 16px;
   width: max-content;
 }
-#blend-la .b-rail__track > .b-card--rail{
+#blend-vegas .b-rail__track > .b-card--rail{
   flex: 0 0 320px;
   scroll-snap-align: start;
   align-self: flex-start;
 }
 @media (max-width: 720px){
-  #blend-la .b-rail__track > .b-card--rail{ flex: 0 0 260px; }}
+  #blend-vegas .b-rail__track > .b-card--rail{ flex: 0 0 260px; }}
 
-#blend-la .b-rail__nav{
+#blend-vegas .b-rail__nav{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -655,19 +655,19 @@
   transition: transform .15s ease, background .15s ease, opacity .2s ease;
   padding: 0;
 }
-#blend-la .b-rail__nav:hover{ transform: translateY(-50%) scale(1.08); background: var(--ink-2); }
-#blend-la .b-rail__nav--prev{ left: -22px; }
-#blend-la .b-rail__nav--next{ right: -22px; }
-#blend-la .b-band--dark .b-rail__nav{ background: var(--yellow); color: var(--black); }
-#blend-la .b-band--dark .b-rail__nav:hover{ background: var(--yellow-deep); }
+#blend-vegas .b-rail__nav:hover{ transform: translateY(-50%) scale(1.08); background: var(--ink-2); }
+#blend-vegas .b-rail__nav--prev{ left: -22px; }
+#blend-vegas .b-rail__nav--next{ right: -22px; }
+#blend-vegas .b-band--dark .b-rail__nav{ background: var(--yellow); color: var(--black); }
+#blend-vegas .b-band--dark .b-rail__nav:hover{ background: var(--yellow-deep); }
 @media (max-width: 880px){
-  #blend-la .b-rail__nav--prev{ left: -10px; }
-  #blend-la .b-rail__nav--next{ right: -10px; }}
+  #blend-vegas .b-rail__nav--prev{ left: -10px; }
+  #blend-vegas .b-rail__nav--next{ right: -10px; }}
 @media (max-width: 720px){
-  #blend-la .b-rail__nav{ display: none; }}
+  #blend-vegas .b-rail__nav{ display: none; }}
 
 /* ============ CARD MARQUEE (legacy, kept for reference) ============ */
-#blend-la .b-card-marquee{
+#blend-vegas .b-card-marquee{
   overflow: hidden;
   position: relative;
   margin: 32px 0 0;
@@ -675,7 +675,7 @@
   -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
 }
-#blend-la .b-card-track{
+#blend-vegas .b-card-track{
   display: flex;
   gap: 16px;
   width: max-content;
@@ -683,41 +683,41 @@
   animation: card-scroll 80s linear infinite;
   will-change: transform;
 }
-#blend-la .b-card-track--alt{ animation-duration: 70s; }
-#blend-la .b-card-track:hover{ animation-play-state: paused; }
-#blend-la .b-card-track.b-is-paused{ animation-play-state: paused; }
+#blend-vegas .b-card-track--alt{ animation-duration: 70s; }
+#blend-vegas .b-card-track:hover{ animation-play-state: paused; }
+#blend-vegas .b-card-track.b-is-paused{ animation-play-state: paused; }
 @keyframes card-scroll{
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 @media (prefers-reduced-motion: reduce){
-  #blend-la .b-card-track{ animation: none; }}
-#blend-la .b-card-track > .b-card--rail{
+  #blend-vegas .b-card-track{ animation: none; }}
+#blend-vegas .b-card-track > .b-card--rail{
   flex: 0 0 320px;
   align-self: flex-start;
 }
 @media (max-width: 720px){
-  #blend-la .b-card-track > .b-card--rail{ flex: 0 0 280px; }}
+  #blend-vegas .b-card-track > .b-card--rail{ flex: 0 0 280px; }}
 
 /* Dark band card variant (VIP section) */
-#blend-la .b-card--dark{
+#blend-vegas .b-card--dark{
   background: var(--ink-2);
   border-color: rgba(255,255,255,.08);
   color: var(--white);
 }
-#blend-la .b-card--dark .b-card__title{ color: var(--white); }
-#blend-la .b-card--dark .b-card__sub{ color: rgba(255,255,255,.7); }
-#blend-la .b-card--dark .b-card__attr{ color: rgba(255,255,255,.55); }
-#blend-la .b-card--dark .b-card__expand p{ color: rgba(255,255,255,.85); }
-#blend-la .b-card--dark .b-card__toggle{ background: var(--yellow); color: var(--black); }
+#blend-vegas .b-card--dark .b-card__title{ color: var(--white); }
+#blend-vegas .b-card--dark .b-card__sub{ color: rgba(255,255,255,.7); }
+#blend-vegas .b-card--dark .b-card__attr{ color: rgba(255,255,255,.55); }
+#blend-vegas .b-card--dark .b-card__expand p{ color: rgba(255,255,255,.85); }
+#blend-vegas .b-card--dark .b-card__toggle{ background: var(--yellow); color: var(--black); }
 
 /* DJ card variant: portrait crop, no toggle */
-#blend-la .b-card--dj .b-card__img{ object-position: center top; }
-#blend-la .b-card--dj .b-card__toggle{ display: none; }
+#blend-vegas .b-card--dj .b-card__img{ object-position: center top; }
+#blend-vegas .b-card--dj .b-card__toggle{ display: none; }
 
 /* Touch devices: swap the auto-marquee for a native swipeable rail */
 @media (hover: none) and (pointer: coarse){
-  #blend-la .b-card-marquee{
+  #blend-vegas .b-card-marquee{
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
@@ -726,19 +726,19 @@
     -webkit-mask-image: none;
     mask-image: none;
   }
-  #blend-la .b-card-marquee::-webkit-scrollbar{ display: none; }
-  #blend-la .b-card-track{ animation: none; }
-  #blend-la .b-card-track > .b-card--rail{ scroll-snap-align: start; }
-  #blend-la .b-card-track > [aria-hidden="true"]{ display: none; }}
+  #blend-vegas .b-card-marquee::-webkit-scrollbar{ display: none; }
+  #blend-vegas .b-card-track{ animation: none; }
+  #blend-vegas .b-card-track > .b-card--rail{ scroll-snap-align: start; }
+  #blend-vegas .b-card-track > [aria-hidden="true"]{ display: none; }}
 
 /* ============ ACCESS BADGES (free vs paid) ============ */
-#blend-la .b-access-key{
+#blend-vegas .b-access-key{
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin: 0 0 28px;
 }
-#blend-la .b-access{
+#blend-vegas .b-access{
   font-family: var(--display);
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -748,18 +748,18 @@
   display: inline-flex;
   align-items: center;
 }
-#blend-la .b-access--free{ background: #1F8A3A; color: #fff; }
-#blend-la .b-access--cash{ background: var(--yellow); color: var(--black); }
-#blend-la .b-access--vip{ background: var(--black); color: var(--yellow); }
+#blend-vegas .b-access--free{ background: #1F8A3A; color: #fff; }
+#blend-vegas .b-access--cash{ background: var(--yellow); color: var(--black); }
+#blend-vegas .b-access--vip{ background: var(--black); color: var(--yellow); }
 
-#blend-la .b-card__access-row{
+#blend-vegas .b-card__access-row{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   margin-bottom: 12px;
 }
-#blend-la .b-card__access{
+#blend-vegas .b-card__access{
   font-family: var(--display);
   font-size: 10px;
   letter-spacing: 0.06em;
@@ -768,10 +768,10 @@
   border-radius: 999px;
   display: inline-block;
 }
-#blend-la .b-card__access--free{ background: #1F8A3A; color: #fff; }
-#blend-la .b-card__access--cash{ background: var(--yellow); color: var(--black); }
-#blend-la .b-card__access--vip{ background: var(--black); color: var(--yellow); }
-#blend-la .b-card__attr{
+#blend-vegas .b-card__access--free{ background: #1F8A3A; color: #fff; }
+#blend-vegas .b-card__access--cash{ background: var(--yellow); color: var(--black); }
+#blend-vegas .b-card__access--vip{ background: var(--black); color: var(--yellow); }
+#blend-vegas .b-card__attr{
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -779,13 +779,13 @@
 }
 
 /* ============ DJ LINEUP ============ */
-#blend-la .b-dj-grid{
+#blend-vegas .b-dj-grid{
   display: grid;
   gap: 14px;
   grid-template-columns: 1fr;
   margin-top: 16px;
 }
-#blend-la .b-dj{
+#blend-vegas .b-dj{
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -793,15 +793,15 @@
   background: var(--ink-2);
   isolation: isolate;
 }
-#blend-la .b-dj__img{
+#blend-vegas .b-dj__img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform .4s ease;
 }
-#blend-la .b-dj:hover .b-dj__img{ transform: scale(1.04); }
-#blend-la .b-dj__overlay{
+#blend-vegas .b-dj:hover .b-dj__img{ transform: scale(1.04); }
+#blend-vegas .b-dj__overlay{
   position: absolute;
   inset: 0;
   display: flex;
@@ -811,7 +811,7 @@
   color: var(--white);
   background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,.85) 100%);
 }
-#blend-la .b-dj__name{
+#blend-vegas .b-dj__name{
   font-family: var(--display);
   font-size: clamp(20px, 2vw, 26px);
   text-transform: uppercase;
@@ -819,7 +819,7 @@
   margin: 0;
   line-height: 1.05;
 }
-#blend-la .b-dj__role{
+#blend-vegas .b-dj__role{
   font-size: 12px;
   color: rgba(255,255,255,.75);
   letter-spacing: 0.1em;
@@ -827,12 +827,12 @@
   margin: 6px 0 0;
 }
 @media (min-width: 600px){
-  #blend-la .b-dj-grid{ grid-template-columns: repeat(2, 1fr); }}
+  #blend-vegas .b-dj-grid{ grid-template-columns: repeat(2, 1fr); }}
 @media (min-width: 900px){
-  #blend-la .b-dj-grid{ grid-template-columns: repeat(5, 1fr); gap: 16px; }}
+  #blend-vegas .b-dj-grid{ grid-template-columns: repeat(5, 1fr); gap: 16px; }}
 
 /* ============ PARTNERS ============ */
-#blend-la .b-presenting{
+#blend-vegas .b-presenting{
   display: grid;
   gap: 24px;
   grid-template-columns: 1fr;
@@ -843,7 +843,7 @@
   padding: 28px;
   margin: 16px 0 12px;
 }
-#blend-la .b-presenting__logo{
+#blend-vegas .b-presenting__logo{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -852,14 +852,14 @@
   border-radius: var(--radius);
   border: 1px solid var(--gray-200);
 }
-#blend-la .b-presenting__logo img{
+#blend-vegas .b-presenting__logo img{
   display: block;
   width: 100%;
   max-width: 240px;
   height: auto;
   object-fit: contain;
 }
-#blend-la .b-presenting__label{
+#blend-vegas .b-presenting__label{
   display: inline-block;
   font-family: var(--display);
   font-size: 11px;
@@ -871,33 +871,33 @@
   border-radius: 999px;
   margin-bottom: 12px;
 }
-#blend-la .b-presenting__copy p{
+#blend-vegas .b-presenting__copy p{
   margin: 0;
   font-size: clamp(15px, 1.4vw, 17px);
   color: var(--ink-2);
   line-height: 1.5;
 }
 @media (min-width: 720px){
-  #blend-la .b-presenting{ grid-template-columns: 280px 1fr; gap: 36px; padding: 32px 36px; }}
-#blend-la .b-presenting--logo-only{
+  #blend-vegas .b-presenting{ grid-template-columns: 280px 1fr; gap: 36px; padding: 32px 36px; }}
+#blend-vegas .b-presenting--logo-only{
   grid-template-columns: 1fr !important;
   justify-items: center;
   padding: 28px;
 }
-#blend-la .b-presenting--logo-only .b-presenting__logo{
+#blend-vegas .b-presenting--logo-only .b-presenting__logo{
   max-width: 360px;
   width: 100%;
 }
 
 /* Two partners side by side: logo + label only, no body copy, so the
    gallery below sits higher on the page. */
-#blend-la .b-partner-pair{
+#blend-vegas .b-partner-pair{
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
   margin: 16px 0 8px;
 }
-#blend-la .b-partner-pair__item{
+#blend-vegas .b-partner-pair__item{
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
@@ -907,12 +907,12 @@
   align-items: center;
   gap: 14px;
 }
-#blend-la .b-partner-pair__item{ justify-content: space-between; }
+#blend-vegas .b-partner-pair__item{ justify-content: space-between; }
 /* Fixed box height keeps the two logos, and the labels under them,
    on the same baseline even though one is an image and one is text. */
-#blend-la .b-partner-pair .b-presenting__logo{ width: 100%; height: 108px; }
-#blend-la .b-partner-pair .b-presenting__label{ margin-bottom: 0; }
-#blend-la .b-partner-pair__wordmark{
+#blend-vegas .b-partner-pair .b-presenting__logo{ width: 100%; height: 108px; }
+#blend-vegas .b-partner-pair .b-presenting__label{ margin-bottom: 0; }
+#blend-vegas .b-partner-pair__wordmark{
   font-family: var(--display);
   font-size: clamp(15px, 1.7vw, 19px);
   letter-spacing: 0.1em;
@@ -921,29 +921,29 @@
   line-height: 1.25;
 }
 @media (min-width: 720px){
-  #blend-la .b-partner-pair{ grid-template-columns: 1fr 1fr; gap: 20px; }}
+  #blend-vegas .b-partner-pair{ grid-template-columns: 1fr 1fr; gap: 20px; }}
 
-#blend-la .b-vendor-grid{
+#blend-vegas .b-vendor-grid{
   display: grid;
   gap: 14px;
   grid-template-columns: 1fr;
   margin: 14px 0 0;
 }
-#blend-la .b-vendor{
+#blend-vegas .b-vendor{
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: transform .2s ease, border-color .2s ease;
 }
-#blend-la .b-vendor:hover{ transform: translateY(-2px); border-color: var(--black); }
-#blend-la .b-vendor__img{
+#blend-vegas .b-vendor:hover{ transform: translateY(-2px); border-color: var(--black); }
+#blend-vegas .b-vendor__img{
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
 }
-#blend-la .b-vendor__img--text{
+#blend-vegas .b-vendor__img--text{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -956,25 +956,25 @@
   text-align: center;
   padding: 24px;
 }
-#blend-la .b-vendor__body{ padding: 18px 22px 22px; }
-#blend-la .b-vendor__name{
+#blend-vegas .b-vendor__body{ padding: 18px 22px 22px; }
+#blend-vegas .b-vendor__name{
   font-family: var(--display);
   font-size: clamp(18px, 2vw, 22px);
   text-transform: uppercase;
   letter-spacing: 0.01em;
   margin: 0 0 6px;
 }
-#blend-la .b-vendor__role{
+#blend-vegas .b-vendor__role{
   margin: 0;
   font-size: 14px;
   color: var(--gray-500);
   line-height: 1.45;
 }
 @media (min-width: 720px){
-  #blend-la .b-vendor-grid{ grid-template-columns: repeat(3, 1fr); }}
+  #blend-vegas .b-vendor-grid{ grid-template-columns: repeat(3, 1fr); }}
 
 /* ============ PARTNERS (legacy marquee) ============ */
-#blend-la .b-partners-subhead{
+#blend-vegas .b-partners-subhead{
   font-family: var(--display);
   font-size: 13px;
   letter-spacing: 0.22em;
@@ -982,21 +982,21 @@
   color: var(--ink-2);
   margin: 40px 0 14px;
 }
-#blend-la .b-partners-subhead:first-of-type{ margin-top: 24px; }
-#blend-la .b-partner-marquee{
+#blend-vegas .b-partners-subhead:first-of-type{ margin-top: 24px; }
+#blend-vegas .b-partner-marquee{
   overflow: hidden;
   margin-top: 12px;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
 }
-#blend-la .b-partner-track{
+#blend-vegas .b-partner-track{
   display: flex;
   width: max-content;
   animation: logo-scroll 55s linear infinite;
 }
-#blend-la .b-partner-track:hover{ animation-play-state: paused; }
-#blend-la .b-partner-track--alt{ animation-duration: 46s; }
-#blend-la .b-partner{
+#blend-vegas .b-partner-track:hover{ animation-play-state: paused; }
+#blend-vegas .b-partner-track--alt{ animation-duration: 46s; }
+#blend-vegas .b-partner{
   flex: 0 0 196px;
   margin-right: 12px;
   background: var(--white);
@@ -1011,13 +1011,13 @@
   text-align: left;
   transition: transform .2s ease, border-color .2s ease;
 }
-#blend-la .b-partner:hover{ transform: translateY(-2px); border-color: var(--black); }
-#blend-la .b-partner__logo{
+#blend-vegas .b-partner:hover{ transform: translateY(-2px); border-color: var(--black); }
+#blend-vegas .b-partner__logo{
   font-family: var(--display);
   font-size: clamp(18px, 2.6vw, 28px);
   letter-spacing: 0.04em;
 }
-#blend-la .b-partner__img{
+#blend-vegas .b-partner__img{
   display: block;
   height: 44px;
   width: 100%;
@@ -1027,51 +1027,51 @@
   filter: brightness(0);
   opacity: 0.9;
 }
-#blend-la .b-partner__role{
+#blend-vegas .b-partner__role{
   font-size: 13px;
   color: var(--gray-500);
   margin-top: 16px;
   line-height: 1.45;
 }
-#blend-la .b-partner--tba{
+#blend-vegas .b-partner--tba{
   background: var(--black);
   color: var(--white);
   border-color: var(--black);
 }
-#blend-la .b-partner--tba .b-partner__role{ color: rgba(255,255,255,.6); }
+#blend-vegas .b-partner--tba .b-partner__role{ color: rgba(255,255,255,.6); }
 
-#blend-la .b-partners-cta{
+#blend-vegas .b-partners-cta{
   margin: 32px 0 0;
   font-size: 15px;
   color: var(--ink-2);
 }
-#blend-la .b-partners-cta a{ font-weight: 600; text-decoration: underline; }
+#blend-vegas .b-partners-cta a{ font-weight: 600; text-decoration: underline; }
 
 @media (max-width: 480px){
-  #blend-la .b-partner{ flex-basis: 172px; }}
+  #blend-vegas .b-partner{ flex-basis: 172px; }}
 
 /* ============ AUDIENCE ============ */
-#blend-la .b-audience-grid{
+#blend-vegas .b-audience-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin: 12px 0 36px;
 }
-#blend-la .b-aud{
+#blend-vegas .b-aud{
   border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--radius);
   padding: 24px 20px;
 }
-#blend-la .b-aud__num{
+#blend-vegas .b-aud__num{
   font-family: var(--display);
   font-size: clamp(28px, 3.6vw, 42px);
   color: var(--yellow);
   line-height: 1;
   margin-bottom: 8px;
 }
-#blend-la .b-aud__label{ font-size: 14px; color: rgba(255,255,255,.75); }
+#blend-vegas .b-aud__label{ font-size: 14px; color: rgba(255,255,255,.75); }
 
-#blend-la .b-audience-reach{
+#blend-vegas .b-audience-reach{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
@@ -1080,13 +1080,13 @@
   border-radius: var(--radius);
   padding: 22px;
 }
-#blend-la .b-reach__num{
+#blend-vegas .b-reach__num{
   font-family: var(--display);
   font-size: clamp(22px, 2.6vw, 32px);
   color: var(--white);
   line-height: 1;
 }
-#blend-la .b-reach__label{
+#blend-vegas .b-reach__label{
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1095,30 +1095,30 @@
 }
 
 @media (min-width: 720px){
-  #blend-la .b-audience-grid{ grid-template-columns: repeat(3, 1fr); }
-  #blend-la .b-audience-reach{ grid-template-columns: repeat(4, 1fr); }}
+  #blend-vegas .b-audience-grid{ grid-template-columns: repeat(3, 1fr); }
+  #blend-vegas .b-audience-reach{ grid-template-columns: repeat(4, 1fr); }}
 
 /* ============ GALLERY ============ */
-#blend-la .b-gallery{
+#blend-vegas .b-gallery{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4px;
   margin-top: 32px;
 }
-#blend-la .b-gallery img{
+#blend-vegas .b-gallery img{
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 @media (min-width: 720px){
-  #blend-la .b-gallery{ grid-template-columns: repeat(3, 1fr); }}
+  #blend-vegas .b-gallery{ grid-template-columns: repeat(3, 1fr); }}
 @media (min-width: 1080px){
-  #blend-la .b-gallery{ grid-template-columns: repeat(4, 1fr); }}
+  #blend-vegas .b-gallery{ grid-template-columns: repeat(4, 1fr); }}
 @media (min-width: 1400px){
-  #blend-la .b-gallery{ grid-template-columns: repeat(5, 1fr); }}
+  #blend-vegas .b-gallery{ grid-template-columns: repeat(5, 1fr); }}
 
 /* ============ REGISTER ============ */
-#blend-la .b-cta-row{
+#blend-vegas .b-cta-row{
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -1126,25 +1126,25 @@
 }
 
 /* ============ FOOTER ============ */
-#blend-la .b-footer{
+#blend-vegas .b-footer{
   background: var(--black);
   color: rgba(255,255,255,.78);
   padding: 72px 0 32px;
 }
-#blend-la .b-footer a{ color: var(--yellow); text-decoration: none; }
-#blend-la .b-footer a:hover{ text-decoration: underline; }
-#blend-la .b-footer__grid{
+#blend-vegas .b-footer a{ color: var(--yellow); text-decoration: none; }
+#blend-vegas .b-footer a:hover{ text-decoration: underline; }
+#blend-vegas .b-footer__grid{
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
 }
-#blend-la .b-footer__brand p{
+#blend-vegas .b-footer__brand p{
   margin: 16px 0 0;
   max-width: 420px;
   font-size: 14px;
   color: rgba(255,255,255,.65);
 }
-#blend-la .b-footer__col h4{
+#blend-vegas .b-footer__col h4{
   font-family: var(--display);
   font-size: 12px;
   letter-spacing: 0.18em;
@@ -1152,8 +1152,8 @@
   color: var(--yellow);
   margin: 0 0 12px;
 }
-#blend-la .b-footer__col p{ margin: 0; font-size: 14px; line-height: 1.7; }
-#blend-la .b-footer__legal{
+#blend-vegas .b-footer__col p{ margin: 0; font-size: 14px; line-height: 1.7; }
+#blend-vegas .b-footer__legal{
   border-top: 1px solid rgba(255,255,255,.1);
   margin-top: 48px;
   padding-top: 24px;
@@ -1164,39 +1164,39 @@
   padding-right: 24px;
 }
 @media (min-width: 720px){
-  #blend-la .b-footer__grid{ grid-template-columns: 2fr 1fr 1fr 1fr; }}
+  #blend-vegas .b-footer__grid{ grid-template-columns: 2fr 1fr 1fr 1fr; }}
 
 /* ============ RSVP FRAME (Sweatpals waitlist iframe button) ============ */
 /* The iframe renders the Sweatpals button; clicks open the waitlist popup
    provided by the script tag loaded at the bottom of the body. */
-#blend-la .b-rsvp-frame{
+#blend-vegas .b-rsvp-frame{
   display: inline-block;
   vertical-align: middle;
   border: 0;
   width: 100%;
 }
-#blend-la .b-rsvp-frame--sm{
+#blend-vegas .b-rsvp-frame--sm{
   max-width: 160px;
   height: 44px;
 }
-#blend-la .b-rsvp-frame--lg{
+#blend-vegas .b-rsvp-frame--lg{
   max-width: 280px;
   height: 56px;
 }
 @media (max-width: 480px){
-  #blend-la .b-rsvp-frame--lg{ max-width: 100%; }}
+  #blend-vegas .b-rsvp-frame--lg{ max-width: 100%; }}
 
 /* ============ SWEATPALS EMBED (legacy, unused) ============ */
 /* Sweatpals injects its own button at the script tag location. Wrapper sets
    minimum sizing so the layout reserves space and the injected button matches
    our scale. The Sweatpals modal handles the waitlist signup popup. */
-#blend-la .b-sweatpals-embed{
+#blend-vegas .b-sweatpals-embed{
   display: inline-block;
   vertical-align: middle;
 }
-#blend-la .b-sweatpals-embed--sm{ min-width: 130px; }
-#blend-la .b-sweatpals-embed--lg{ min-width: 220px; }
-#blend-la .b-sweatpals-embed button, #blend-la .b-sweatpals-embed > button{
+#blend-vegas .b-sweatpals-embed--sm{ min-width: 130px; }
+#blend-vegas .b-sweatpals-embed--lg{ min-width: 220px; }
+#blend-vegas .b-sweatpals-embed button, #blend-vegas .b-sweatpals-embed > button{
   font-family: var(--display) !important;
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
@@ -1204,7 +1204,7 @@
 }
 
 /* ============ RSVP MODAL (Sweatpals waitlist iframe) ============ */
-#blend-la .b-rsvp-modal{
+#blend-vegas .b-rsvp-modal{
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -1213,8 +1213,8 @@
   justify-content: center;
   padding: 24px;
 }
-#blend-la .b-rsvp-modal.b-is-open{ display: flex; }
-#blend-la .b-rsvp-modal__backdrop{
+#blend-vegas .b-rsvp-modal.b-is-open{ display: flex; }
+#blend-vegas .b-rsvp-modal__backdrop{
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,.78);
@@ -1224,7 +1224,7 @@
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
-#blend-la .b-rsvp-modal__dialog{
+#blend-vegas .b-rsvp-modal__dialog{
   position: relative;
   z-index: 1;
   width: min(96vw, 560px);
@@ -1234,14 +1234,14 @@
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(0,0,0,.5);
 }
-#blend-la .b-rsvp-modal__frame{
+#blend-vegas .b-rsvp-modal__frame{
   width: 100%;
   height: 100%;
   border: 0;
   display: block;
   background: var(--black);
 }
-#blend-la .b-rsvp-modal__close{
+#blend-vegas .b-rsvp-modal__close{
   position: absolute;
   top: 12px;
   right: 12px;
@@ -1260,32 +1260,32 @@
   justify-content: center;
   transition: background .15s ease, transform .15s ease;
 }
-#blend-la .b-rsvp-modal__close:hover{ background: rgba(0,0,0,.85); transform: scale(1.05); }
-#blend-la body.b-is-rsvp-open{ overflow: hidden; }
+#blend-vegas .b-rsvp-modal__close:hover{ background: rgba(0,0,0,.85); transform: scale(1.05); }
+#blend-vegas body.b-is-rsvp-open{ overflow: hidden; }
 
 /* ============ SWEATPALS WIDGET (script-paired iframe button) ============ */
 /* Renders the Sweatpals checkout button directly. The script in <head>
    handles the popup overlay when the iframe button is clicked. */
-#blend-la .b-sweatpals-widget{
+#blend-vegas .b-sweatpals-widget{
   display: inline-block;
   vertical-align: middle;
   line-height: 0;
 }
-#blend-la .b-sweatpals-widget iframe{
+#blend-vegas .b-sweatpals-widget iframe{
   border: 0;
   display: block;
   width: 100%;
   background: transparent;
 }
-#blend-la .b-sweatpals-widget--sm{ width: 160px; }
-#blend-la .b-sweatpals-widget--sm iframe{ height: 44px; }
-#blend-la .b-sweatpals-widget--lg{ width: 280px; }
-#blend-la .b-sweatpals-widget--lg iframe{ height: 56px; }
+#blend-vegas .b-sweatpals-widget--sm{ width: 160px; }
+#blend-vegas .b-sweatpals-widget--sm iframe{ height: 44px; }
+#blend-vegas .b-sweatpals-widget--lg{ width: 280px; }
+#blend-vegas .b-sweatpals-widget--lg iframe{ height: 56px; }
 @media (max-width: 480px){
-  #blend-la .b-sweatpals-widget--lg{ width: 100%; max-width: 360px; }}
+  #blend-vegas .b-sweatpals-widget--lg{ width: 100%; max-width: 360px; }}
 
 /* ============ PRE-REGISTER MODAL (custom waitlist form) ============ */
-#blend-la .b-rsvp-modal{
+#blend-vegas .b-rsvp-modal{
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -1294,10 +1294,10 @@
   justify-content: center;
   padding: 20px;
 }
-#blend-la .b-rsvp-modal.b-is-open{ display: flex; }
-#blend-la body.b-is-rsvp-open{ overflow: hidden; }
+#blend-vegas .b-rsvp-modal.b-is-open{ display: flex; }
+#blend-vegas body.b-is-rsvp-open{ overflow: hidden; }
 
-#blend-la .b-rsvp-modal__backdrop{
+#blend-vegas .b-rsvp-modal__backdrop{
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,.78);
@@ -1307,7 +1307,7 @@
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
-#blend-la .b-rsvp-modal__dialog{
+#blend-vegas .b-rsvp-modal__dialog{
   position: relative;
   z-index: 1;
   width: min(96vw, 460px);
@@ -1320,21 +1320,21 @@
   padding: 32px 28px 28px;
   font-family: var(--body);
 }
-#blend-la .b-rsvp-modal__dialog--frame{
+#blend-vegas .b-rsvp-modal__dialog--frame{
   width: min(96vw, 560px);
   height: min(94vh, 800px);
   max-height: 94vh;
   padding: 0;
   overflow: hidden;
 }
-#blend-la .b-rsvp-modal__iframe{
+#blend-vegas .b-rsvp-modal__iframe{
   width: 100%;
   height: 100%;
   border: 0;
   display: block;
   background: var(--black);
 }
-#blend-la .b-rsvp-modal__close{
+#blend-vegas .b-rsvp-modal__close{
   position: absolute;
   top: 12px;
   right: 12px;
@@ -1352,8 +1352,8 @@
   justify-content: center;
   transition: background .15s ease, transform .15s ease;
 }
-#blend-la .b-rsvp-modal__close:hover{ background: rgba(255,255,255,.2); transform: scale(1.05); }
-#blend-la .b-rsvp-modal__title{
+#blend-vegas .b-rsvp-modal__close:hover{ background: rgba(255,255,255,.2); transform: scale(1.05); }
+#blend-vegas .b-rsvp-modal__title{
   font-family: var(--display);
   font-size: 26px;
   letter-spacing: 0;
@@ -1361,16 +1361,16 @@
   margin: 4px 0 8px;
   text-align: center;
 }
-#blend-la .b-rsvp-modal__lede{
+#blend-vegas .b-rsvp-modal__lede{
   margin: 0 0 22px;
   text-align: center;
   color: rgba(255,255,255,.75);
   font-size: 15px;
   line-height: 1.5;
 }
-#blend-la .b-rsvp-form{ display: flex; flex-direction: column; gap: 12px; }
-#blend-la .b-rsvp-field{ display: block; }
-#blend-la .b-rsvp-field__label{
+#blend-vegas .b-rsvp-form{ display: flex; flex-direction: column; gap: 12px; }
+#blend-vegas .b-rsvp-field{ display: block; }
+#blend-vegas .b-rsvp-field__label{
   display: block;
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -1378,7 +1378,7 @@
   color: rgba(255,255,255,.6);
   margin-bottom: 6px;
 }
-#blend-la .b-rsvp-field__input{
+#blend-vegas .b-rsvp-field__input{
   width: 100%;
   padding: 14px 16px;
   background: rgba(255,255,255,.08);
@@ -1390,13 +1390,13 @@
   outline: none;
   transition: border-color .15s ease, background .15s ease;
 }
-#blend-la .b-rsvp-field__input:focus{
+#blend-vegas .b-rsvp-field__input:focus{
   border-color: var(--yellow);
   background: rgba(255,255,255,.12);
 }
-#blend-la .b-rsvp-field__input::placeholder{ color: rgba(255,255,255,.35); }
+#blend-vegas .b-rsvp-field__input::placeholder{ color: rgba(255,255,255,.35); }
 
-#blend-la .b-rsvp-consent{
+#blend-vegas .b-rsvp-consent{
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -1405,7 +1405,7 @@
   color: rgba(255,255,255,.6);
   margin: 6px 0 8px;
 }
-#blend-la .b-rsvp-consent input[type="checkbox"]{
+#blend-vegas .b-rsvp-consent input[type="checkbox"]{
   flex-shrink: 0;
   width: 18px;
   height: 18px;
@@ -1414,31 +1414,31 @@
   cursor: pointer;
 }
 
-#blend-la .b-rsvp-form__submit{
+#blend-vegas .b-rsvp-form__submit{
   width: 100%;
   margin-top: 6px;
   border-radius: 999px;
 }
-#blend-la .b-rsvp-form__submit:disabled{
+#blend-vegas .b-rsvp-form__submit:disabled{
   opacity: 0.6;
   cursor: progress;
 }
-#blend-la .b-rsvp-form__error{
+#blend-vegas .b-rsvp-form__error{
   margin: 4px 0 0;
   font-size: 13px;
   color: #ff8a80;
   text-align: center;
 }
 
-#blend-la .b-rsvp-modal__success{ text-align: center; }
-#blend-la .b-rsvp-modal__success .b-btn{ display: inline-block; margin-top: 12px; }
+#blend-vegas .b-rsvp-modal__success{ text-align: center; }
+#blend-vegas .b-rsvp-modal__success .b-btn{ display: inline-block; margin-top: 12px; }
 
 /* ============ SWEATPALS HIDDEN HOST ============ */
 /* Renders the auto-embed widget off-screen so Sweatpals's script and its
    click-to-popup handler are loaded, but no widget content is visible.
    Our Pre-Register buttons trigger the popup by .click()-ing the widget's
    internal trigger element. */
-#blend-la #sweatpals-host{
+#blend-vegas #sweatpals-host{
   position: fixed;
   left: -10000px;
   top: -10000px;
@@ -1452,12 +1452,12 @@
 /* ============ RSVP AUTO-EMBED (Sweatpals auto-injected button) ============ */
 /* With enableAutoEmbed=true Sweatpals injects its own styled button next to
    the script tag. The wrapper just reserves layout space and sets sizing. */
-#blend-la .b-rsvp-autoembed{
+#blend-vegas .b-rsvp-autoembed{
   display: inline-block;
   vertical-align: middle;
 }
-#blend-la .b-rsvp-autoembed--sm{ min-width: 130px; }
-#blend-la .b-rsvp-autoembed--lg{ min-width: 240px; }
+#blend-vegas .b-rsvp-autoembed--sm{ min-width: 130px; }
+#blend-vegas .b-rsvp-autoembed--lg{ min-width: 240px; }
 
 /* ============ RSVP TRIGGER (Sweatpals iframe overlay) ============ */
 /* Visible OTT-styled pill button sits behind; the Sweatpals iframe
@@ -1465,13 +1465,13 @@
    Sweatpals button, which the checkout script (at end of body)
    intercepts to open the registration modal inline.
    Pattern from SF Fit Fest (PR #52). */
-#blend-la .b-rsvp-trigger{
+#blend-vegas .b-rsvp-trigger{
   position: relative;
   display: inline-block;
   line-height: 0;
 }
-#blend-la .b-rsvp-trigger .b-btn{ line-height: 1.55; }
-#blend-la .b-rsvp-trigger__frame{
+#blend-vegas .b-rsvp-trigger .b-btn{ line-height: 1.55; }
+#blend-vegas .b-rsvp-trigger__frame{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1483,7 +1483,7 @@
 }
 
 /* Pre-Register modal: loads the Sweatpals "Join waitlist" early-access form. */
-#blend-la .b-sp-modal{
+#blend-vegas .b-sp-modal{
   border: 0;
   padding: 0;
   border-radius: 18px;
@@ -1493,15 +1493,15 @@
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
-#blend-la .b-sp-modal::backdrop{
+#blend-vegas .b-sp-modal::backdrop{
   background: rgba(0, 0, 0, 0.6);
 }
-#blend-la .b-sp-modal__bar{
+#blend-vegas .b-sp-modal__bar{
   display: flex;
   justify-content: flex-end;
   padding: 8px 10px 0;
 }
-#blend-la .b-sp-modal__close{
+#blend-vegas .b-sp-modal__close{
   border: 0;
   background: transparent;
   font-size: 26px;
@@ -1512,10 +1512,10 @@
   height: 38px;
   border-radius: 999px;
 }
-#blend-la .b-sp-modal__close:hover{
+#blend-vegas .b-sp-modal__close:hover{
   background: var(--gray-100);
 }
-#blend-la .b-sp-modal__frame{
+#blend-vegas .b-sp-modal__frame{
   display: block;
   width: 100%;
   height: 620px;
