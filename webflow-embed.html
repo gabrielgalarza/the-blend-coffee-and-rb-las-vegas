@@ -1,10 +1,10 @@
 <!-- The Blend Vegas -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="https://gabrielgalarza.github.io/the-blend-coffee-and-rb-las-vegas/embed.css?v=9">
+<link rel="stylesheet" href="https://gabrielgalarza.github.io/the-blend-coffee-and-rb-las-vegas/embed.css?v=11">
 
 <div id="blend-vegas">
-<!-- Signup happens on the page: every CTA scrolls to #register, where the SweatPals
-     waitlist widget is embedded. The direct SweatPals link is only a fallback under it. -->
+<!-- Every "Join the waitlist" button opens the SweatPals waitlist form in a popup
+     (#waitlist-dialog, wired up in script.js). The href is the no-JS fallback. -->
 <!-- HERO -->
 <section class="b-hero" id="top">
   <img class="b-hero__bg" src="https://gabrielgalarza.github.io/the-blend-coffee-and-rb-las-vegas/images/hero.jpg" alt="The Blend Coffee & R&B Day Party crowd" />
@@ -20,7 +20,7 @@
     </h1>
     <p style="font-family:var(--display); font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--yellow); margin:0 0 26px;">The Blend comes to Las Vegas</p>
     <div class="b-hero__ctas">
-      <a class="b-btn b-btn--yellow b-btn--lg" href="#register">Join the waitlist →</a>
+      <a class="b-btn b-btn--yellow b-btn--lg" data-waitlist href="https://sweatpals.com/event/the-blend-coffee-and-rb-las-vegas" target="_blank" rel="noopener">Join the waitlist →</a>
       <a class="b-btn b-btn--ghost b-btn--lg" href="#included">See what's included</a>
     </div>
     <div class="b-hero__partners">
@@ -291,24 +291,24 @@
       Tickets go live Friday, October 9 at 10 AM PT. The waitlist gets notified first, with early access, and
       hears the venue and lineup before anyone else.
     </p>
-  </div>
-  <div class="b-container">
-    <div class="b-waitlist-widget">
-      <!-- Sweatpals widget begin -->
-      <script src="https://sweatpals.com/static/embed/event/checkout/script.js?priceMode=several&enableAutoEmbed=true&eventAlias=the-blend-coffee-and-rb-las-vegas&size=lg&colorHex=000000&fontFamily=Poppins&priceTiersJson=%255B%2522b3892c83-133e-44bd-a590-660301bff181%2522%255D"></script>
-      <!-- Sweatpals widget end -->
+    <div class="b-cta-row">
+      <a class="b-btn b-btn--black b-btn--lg" data-waitlist href="https://sweatpals.com/event/the-blend-coffee-and-rb-las-vegas" target="_blank" rel="noopener">Join the waitlist →</a>
     </div>
-  </div>
-  <div class="b-container b-container--narrow b-text-center">
-    <p style="margin:20px 0 0; font-size:14px; color:var(--ink-2);">
-      Widget not loading? <a data-register href="https://sweatpals.com/event/the-blend-coffee-and-rb-las-vegas" target="_blank" rel="noopener" style="font-weight:600; text-decoration:underline;">Join on SweatPals</a>
-    </p>
     <p style="margin:24px 0 0; font-size:14px; color:var(--ink-2);">
       Questions? DM <a href="https://instagram.com/overthetopxp" target="_blank" rel="noopener" style="font-weight:600; text-decoration:underline;">@overthetopxp</a>
       or email <a href="mailto:experienceott@gmail.com" style="font-weight:600; text-decoration:underline;">experienceott@gmail.com</a>
     </p>
   </div>
 </section>
+
+<!-- SweatPals waitlist popup. The form URL is what SweatPals' own checkout widget
+     opens for this event's waitlist tier; if the tier changes in SweatPals, update
+     priceTierId (and priceTiersJson) here. Loaded on first open. -->
+<dialog class="b-waitlist-dialog" id="waitlist-dialog" aria-label="Join the waitlist">
+  <button class="b-waitlist-dialog__close" type="button" data-waitlist-close aria-label="Close">&times;</button>
+  <iframe class="b-waitlist-dialog__frame" title="SweatPals waitlist signup" allow="payment *"
+    data-src="https://sweatpals.com/embed/the-blend-coffee-and-rb-las-vegas/checkout?loader=false&amp;embedWidget=true&amp;priceTiersJson=%255B%2522b3892c83-133e-44bd-a590-660301bff181%2522%255D&amp;disableCloseCheckout=true&amp;size=lg&amp;waitlist=true&amp;priceTierId=0a40dc21-460e-4463-b857-a0e59024e05e&amp;ticketCount=1"></iframe>
+</dialog>
 </div>
 
-<script src="https://gabrielgalarza.github.io/the-blend-coffee-and-rb-las-vegas/embed.js?v=9"></script>
+<script src="https://gabrielgalarza.github.io/the-blend-coffee-and-rb-las-vegas/embed.js?v=11"></script>
