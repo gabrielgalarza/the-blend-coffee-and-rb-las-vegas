@@ -4,11 +4,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#FFD60A" />
-<title>The Blend: Coffee & R&B Day Party · Las Vegas · Join the Waitlist</title>
-<meta name="description" content="The Blend is coming to Las Vegas. Over The Top's Coffee & R&B Day Party: R&B classics, coffee & matcha, a cash-prize sing-along, and community. Date and venue drop to the waitlist first. 21+." />
+<title>The Blend: Coffee & R&B Day Party · Las Vegas · November 14, 2026</title>
+<meta name="description" content="The Blend comes to Las Vegas. Over The Top's Coffee & R&B Day Party on Saturday, November 14, 2026, 11AM-3PM. R&B classics with Jaymeebaaby, coffee & matcha, a $200 sing-along, and a complimentary coffee or matcha for the first 50 guests. Tickets from $20. Join the waitlist. 21+." />
 
-<meta property="og:title" content="The Blend: Coffee & R&B Day Party · Las Vegas · Join the Waitlist" />
-<meta property="og:description" content="Over The Top's Coffee & R&B Day Party is coming to Las Vegas. Join the waitlist to hear the date, venue and ticket drop first. 21+." />
+<meta property="og:title" content="The Blend: Coffee & R&B Day Party · Las Vegas · Nov 14, 2026" />
+<meta property="og:description" content="Over The Top's Coffee & R&B Day Party is coming to Las Vegas. Saturday, November 14, 2026, 11AM-3PM. Join the waitlist. 21+." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://gabrielgalarza.github.io/the-blend-coffee-and-rb-las-vegas/images/hero.jpg" />
 
@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="styles.css?v=7" />
+<link rel="stylesheet" href="styles.css?v=9" />
 
 <!-- Meta Pixel Code (OTT pixel, same as LA) -->
 <script>
@@ -38,8 +38,8 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
 </head>
 <body>
 
-<!-- All waitlist CTAs point at the SweatPals waitlist, not the ticketing page.
-     TODO: replace SWEATPALS_WAITLIST_URL everywhere once the Vegas waitlist exists. -->
+<!-- Signup happens on the page: every CTA scrolls to #register, where the SweatPals
+     waitlist widget is embedded. The direct SweatPals link is only a fallback under it. -->
 <header class="nav">
   <a href="#top" class="nav__brand">
     <img class="brand-mark" src="logos/ott.png" alt="Over The Top" />
@@ -48,11 +48,13 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
   </a>
   <nav class="nav__links">
     <a href="#vision">Vision</a>
-    <a href="#included">What to expect</a>
-    <a href="#gallery">Past editions</a>
+    <a href="#included">Included</a>
+    <a href="#vip">VIP</a>
+    <a href="#lineup">Lineup</a>
+    <a href="#venue">When &amp; where</a>
     <a href="#register">Waitlist</a>
   </nav>
-  <a class="btn btn--small btn--yellow" data-register href="SWEATPALS_WAITLIST_URL" target="_blank" rel="noopener">Join waitlist</a>
+  <a class="btn btn--small btn--yellow" href="#register">Join waitlist</a>
 </header>
 
 <!-- HERO -->
@@ -61,23 +63,23 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
   <div class="hero__overlay"></div>
   <div class="hero__content">
     <div class="hero__eyebrow">
-      <span class="dot"></span> Las Vegas · Coming soon · Date &amp; venue TBA
+      <span class="dot"></span> Las Vegas · Sat Nov 14, 2026 · 11AM&ndash;3PM
     </div>
     <h1 class="hero__title">
       <span class="line">THE</span>
       <span class="line line--yellow">BLEND</span>
       <span class="line line--small">COFFEE &amp; R&amp;B DAY PARTY</span>
     </h1>
-    <p style="font-family:var(--display); font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--yellow); margin:0 0 26px;">The Blend is coming to Las Vegas</p>
+    <p style="font-family:var(--display); font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--yellow); margin:0 0 26px;">The Blend comes to Las Vegas</p>
     <div class="hero__ctas">
-      <a class="btn btn--yellow btn--lg" data-register href="SWEATPALS_WAITLIST_URL" target="_blank" rel="noopener">Join the waitlist →</a>
-      <a class="btn btn--ghost btn--lg" href="#included">See what to expect</a>
+      <a class="btn btn--yellow btn--lg" href="#register">Join the waitlist →</a>
+      <a class="btn btn--ghost btn--lg" href="#included">See what's included</a>
     </div>
     <div class="hero__partners">
       <span class="hero__partners-label">Good to know</span>
       <p style="font-size:14px; color:rgba(255,255,255,.82); margin:0; max-width:580px;">
-        Tickets aren't on sale yet. Join the waitlist and you'll hear the date, the venue and the ticket drop
-        before anyone else · 21+ event.
+        Tickets go live Fri Oct 9 at 10AM PT. Waitlist gets early access · 21+ event · Venue TBA · First 50 guests to arrive get a complimentary
+        coffee or matcha · Dress code: coffee tones, matcha colors accepted.
       </p>
     </div>
   </div>
@@ -90,7 +92,7 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
     <div class="vision__grid">
       <div class="vision__copy">
         <span class="kicker">The vision</span>
-        <h2 class="h2">Coffee, matcha, R&amp;B classics, and a sing-along contest.</h2>
+        <h2 class="h2">Coffee, matcha, R&amp;B classics, and a $200 sing-along contest.</h2>
         <p>
           Over The Top is bringing their concept &ldquo;The Blend&rdquo; from the Bay to Las Vegas: a Coffee &amp; R&amp;B
           Day Party built around your R&amp;B classics, your café drink or espresso martini of choice, and our
@@ -98,23 +100,23 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
         </p>
       </div>
       <div class="vision__stats">
-        <div class="stat"><div class="stat__num">LV</div><div class="stat__label">First Las Vegas edition</div></div>
-        <div class="stat"><div class="stat__num">TBA</div><div class="stat__label">Date &amp; venue</div></div>
-        <div class="stat"><div class="stat__num">21+</div><div class="stat__label">Event</div></div>
-        <div class="stat"><div class="stat__num">Free</div><div class="stat__label">To join the waitlist</div></div>
+        <div class="stat"><div class="stat__num">$20+</div><div class="stat__label">Tickets from</div></div>
+        <div class="stat"><div class="stat__num">$200</div><div class="stat__label">Sing-along prize</div></div>
+        <div class="stat"><div class="stat__num">4hrs</div><div class="stat__label">Of programming</div></div>
+        <div class="stat"><div class="stat__num">50</div><div class="stat__label">Complimentary coffees &amp; matchas</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT TO EXPECT (format from past editions; no Vegas-specific promises) -->
+<!-- INCLUDED WITH EVERY TICKET -->
 <section class="band" id="included">
   <div class="container">
     <span class="kicker">The experience</span>
-    <h2 class="h2">What to expect.</h2>
+    <h2 class="h2">Included in your experience.</h2>
     <p class="lede" style="margin:-12px 0 24px; max-width:780px;">
-      The format behind every Blend across the Bay: R&amp;B DJs, a cash-prize sing-along, coffee and matcha, and a
-      photo booth. Vegas details drop to the waitlist first.
+      The DJs, the $200 sing-along, the photo booth, and a complimentary coffee or matcha for the first 50 guests
+      to arrive. All included in your experience.
     </p>
 
     <div class="rail" data-rail>
@@ -123,11 +125,11 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
         <div class="rail__track">
 
           <article class="card card--rail" data-card>
-            <img class="card__img" src="images/dj-black-woman.jpg" alt="A DJ dancing behind the decks at a past Blend" />
+            <img class="card__img" src="images/jaymeebaaby.jpg" alt="Jaymeebaaby DJing a live R&B set" />
             <div class="card__body">
               <h3 class="card__title">Live R&amp;B DJ Sets</h3>
               <div class="card__expand">
-                <p>R&amp;B classics all afternoon. Vegas lineup to be announced.</p>
+                <p>R&amp;B classics all afternoon with Jaymeebaaby. More names to be announced.</p>
               </div>
               <button class="card__toggle" aria-label="Expand">+</button>
             </div>
@@ -136,20 +138,20 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
           <article class="card card--rail" data-card>
             <img class="card__img" src="images/singalong-cash-prize.jpg" alt="Winner holding the sing-along prize check at a past Blend" />
             <div class="card__body">
-              <h3 class="card__title">Sing-Along Contest</h3>
+              <h3 class="card__title">$200 Sing-Along Contest</h3>
               <div class="card__expand">
-                <p>Grab the mic for our infamous sing-along contest. Your R&amp;B moment, best voice takes the cash.</p>
+                <p>Grab the mic for the $200 sing-along contest. Your R&amp;B moment, best voice takes the cash.</p>
               </div>
               <button class="card__toggle" aria-label="Expand">+</button>
             </div>
           </article>
 
           <article class="card card--rail" data-card>
-            <img class="card__img" src="images/cafe.jpg" alt="Coffee and matcha at the café" />
+            <img class="card__img" src="images/cafe.jpg" alt="First coffee or matcha free" />
             <div class="card__body">
-              <h3 class="card__title">Coffee &amp; Matcha</h3>
+              <h3 class="card__title">Complimentary Coffee or Matcha</h3>
               <div class="card__expand">
-                <p>Café drinks all afternoon, alongside espresso martinis for the 21+ crowd.</p>
+                <p>The first 50 guests to arrive get a complimentary coffee or matcha latte, courtesy of OTT.</p>
               </div>
               <button class="card__toggle" aria-label="Expand">+</button>
             </div>
@@ -173,31 +175,113 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- TODO(vegas): VIP perks depend on the Vegas sponsor/venue deal. Fill in and remove `hidden`. -->
-<section class="band band--dark" id="vip" hidden>
+<!-- VIP -->
+<section class="band band--dark" id="vip">
   <div class="container">
     <span class="kicker kicker--yellow">VIP / Members</span>
     <h2 class="h2 h2--light">What's included with VIP access.</h2>
     <p class="lede" style="color:rgba(255,255,255,.7); margin:-12px 0 24px; max-width:780px;">
-      OTT members are automatically VIPs. Your membership includes VIP access.
+      VIP tickets include coffee, matcha and specialty cocktails. OTT members are automatically VIPs. Your membership
+      includes VIP access.
     </p>
+
+    <div class="rail" data-rail>
+      <button class="rail__nav rail__nav--prev" type="button" aria-label="Previous">‹</button>
+      <div class="rail__viewport">
+        <div class="rail__track">
+
+          <article class="card card--rail card--dark" data-card>
+            <img class="card__img" src="images/vip-matcha.jpg" alt="Coffee and matcha lattes" />
+            <div class="card__body">
+              <div class="card__access-row">
+                <span class="card__access card__access--vip">Included</span>
+                <span class="card__attr">VIP &amp; members</span>
+              </div>
+              <h3 class="card__title">Coffee &amp; Matcha</h3>
+              <p class="card__sub">Café lattes included with VIP</p>
+              <div class="card__expand">
+                <p>Coffee and matcha lattes are included for VIP and members.</p>
+              </div>
+              <button class="card__toggle" aria-label="Expand">+</button>
+            </div>
+          </article>
+
+          <article class="card card--rail card--dark" data-card>
+            <img class="card__img" src="images/vip-espresso.jpg" alt="Espresso martini tower" />
+            <div class="card__body">
+              <div class="card__access-row">
+                <span class="card__access card__access--vip">Included · 21+</span>
+                <span class="card__attr">VIP &amp; members</span>
+              </div>
+              <h3 class="card__title">Specialty Cocktails</h3>
+              <p class="card__sub">Included with VIP</p>
+              <div class="card__expand">
+                <p>Specialty cocktails are included for VIP and members. 21+.</p>
+              </div>
+              <button class="card__toggle" aria-label="Expand">+</button>
+            </div>
+          </article>
+
+          <article class="card card--rail card--dark" data-card>
+            <img class="card__img" src="images/vip-lounge.jpg" alt="OTT members at a past Blend" />
+            <div class="card__body">
+              <div class="card__access-row">
+                <span class="card__access card__access--vip">Members</span>
+                <span class="card__attr">automatic</span>
+              </div>
+              <h3 class="card__title">Members Are VIP</h3>
+              <p class="card__sub">Your membership includes VIP access</p>
+              <div class="card__expand">
+                <p>OTT members are automatically VIPs at The Blend. No separate VIP ticket needed.</p>
+              </div>
+              <button class="card__toggle" aria-label="Expand">+</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <button class="rail__nav rail__nav--next" type="button" aria-label="Next">›</button>
+    </div>
   </div>
 </section>
 
-<!-- TODO(vegas): lineup. Add DJ tiles (3:4, 1400px tall) and remove `hidden`. -->
-<section class="band" id="lineup" hidden>
+<!-- DJ LINEUP. TODO(vegas): replace the TBA tile as DJs confirm (3:4 tiles, 1400px tall). -->
+<section class="band" id="lineup">
   <div class="container">
     <span class="kicker">The lineup</span>
     <h2 class="h2">R&amp;B all afternoon.</h2>
-    <div class="dj-grid"></div>
+    <p class="lede" style="margin:-12px 0 24px; max-width:780px;">
+      Jaymeebaaby on the decks, with more names still to be announced. Classics, deep cuts, and the songs you forgot
+      you knew every word to.
+    </p>
+
+    <div class="dj-grid">
+      <article class="dj">
+        <img class="dj__img" src="images/jaymeebaaby.jpg" alt="Jaymeebaaby" />
+        <div class="dj__overlay">
+          <h3 class="dj__name">Jaymeebaaby</h3>
+          <p class="dj__role">R&amp;B set</p>
+        </div>
+      </article>
+
+      <article class="dj">
+        <div class="dj__overlay">
+          <h3 class="dj__name">More TBA</h3>
+          <p class="dj__role">Announced to the waitlist first</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- TODO(vegas): venue, date/time and directions link. Remove `hidden` once announced. -->
-<section class="band band--cream" id="venue" hidden>
+<!-- WHEN & WHERE. TODO(vegas): venue name, address and a "Get directions" button once announced. -->
+<section class="band band--cream" id="venue">
   <div class="container">
-    <span class="kicker">Venue &amp; directions</span>
-    <h2 class="h2">Venue TBA.</h2>
+    <span class="kicker">When &amp; where</span>
+    <h2 class="h2">Saturday, November 14, 2026.</h2>
+    <p class="lede" style="margin:-12px 0 28px; max-width:780px;">
+      11 AM &ndash; 3 PM in Las Vegas. Venue to be announced, and the waitlist hears it first.
+    </p>
     <p style="text-align:center; margin:22px 0 0; font-size:14px; color:var(--gray-500); letter-spacing:.04em;">
       21+ event &nbsp;·&nbsp; All tickets non-refundable
     </p>
@@ -256,11 +340,21 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
     <span class="kicker">Get in first</span>
     <h2 class="h2" style="margin-bottom:16px;">Join the Vegas waitlist.</h2>
     <p style="margin:0 auto 32px; max-width:560px; font-size:16px; color:var(--ink-2);">
-      Waitlisted guests hear the date, venue and lineup first, and get first access when tickets drop.
+      Tickets go live Friday, October 9 at 10 AM PT. The waitlist gets notified first, with early access, and
+      hears the venue and lineup before anyone else.
     </p>
-    <div class="cta-row">
-      <a class="btn btn--black btn--lg" data-register href="SWEATPALS_WAITLIST_URL" target="_blank" rel="noopener">Join the waitlist →</a>
+  </div>
+  <div class="container">
+    <div class="waitlist-widget">
+      <!-- Sweatpals widget begin -->
+      <script src="https://sweatpals.com/static/embed/event/checkout/script.js?priceMode=several&enableAutoEmbed=true&eventAlias=the-blend-coffee-and-rb-las-vegas&size=lg&colorHex=000000&fontFamily=Poppins&priceTiersJson=%255B%2522b3892c83-133e-44bd-a590-660301bff181%2522%255D"></script>
+      <!-- Sweatpals widget end -->
     </div>
+  </div>
+  <div class="container container--narrow text-center">
+    <p style="margin:20px 0 0; font-size:14px; color:var(--ink-2);">
+      Widget not loading? <a data-register href="https://sweatpals.com/event/the-blend-coffee-and-rb-las-vegas" target="_blank" rel="noopener" style="font-weight:600; text-decoration:underline;">Join on SweatPals</a>
+    </p>
     <p style="margin:24px 0 0; font-size:14px; color:var(--ink-2);">
       Questions? DM <a href="https://instagram.com/overthetopxp" target="_blank" rel="noopener" style="font-weight:600; text-decoration:underline;">@overthetopxp</a>
       or email <a href="mailto:experienceott@gmail.com" style="font-weight:600; text-decoration:underline;">experienceott@gmail.com</a>
@@ -268,6 +362,6 @@ src="https://www.facebook.com/tr?id=1495548463835448&ev=PageView&noscript=1"
   </div>
 </section>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=9"></script>
 </body>
 </html>

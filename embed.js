@@ -131,8 +131,9 @@ document.querySelectorAll('.b-partner, .b-stat, .b-aud, .b-vendor').forEach((el)
   io.observe(el);
 });
 
-// Meta Pixel: waitlist CTA clicks. The links leave for the SweatPals waitlist,
-// so this is the only place signup intent is recorded. (The LA site also called
+// Meta Pixel: the SweatPals widget forwards its own signup events to fbq, so
+// this only covers the fallback "Join on SweatPals" link, which leaves the page
+// and would otherwise go unrecorded. (The LA site also called
 // window.amplitude, but no Amplitude snippet was ever loaded, so those events
 // were silently dropped. Removed rather than carried over.)
 document.querySelectorAll('[data-register]').forEach((el) => {

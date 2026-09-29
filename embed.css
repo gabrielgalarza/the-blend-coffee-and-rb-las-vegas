@@ -1522,3 +1522,18 @@
   max-height: calc(90vh - 46px);
   border: 0;
 }
+
+/* ============ SWEATPALS WAITLIST WIDGET ============ */
+/* The widget injects its own iframe after the script tag; this just frames it. */
+#blend-vegas .b-waitlist-widget{
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  padding: 20px 24px;
+}
+#blend-vegas .b-waitlist-widget iframe{ display: block; }
+@media (max-width: 600px){
+  #blend-vegas .b-waitlist-widget{ padding: 12px 14px; border-radius: var(--radius); }}
