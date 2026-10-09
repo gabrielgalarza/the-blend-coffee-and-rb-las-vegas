@@ -131,52 +131,18 @@ document.querySelectorAll('.partner, .stat, .aud, .vendor').forEach((el) => {
   io.observe(el);
 });
 
-// SweatPals waitlist popup. Every [data-waitlist] button opens #waitlist-dialog
-// instead of following its href (kept as the no-JS fallback).
-(function () {
-  const dialog = document.getElementById('waitlist-dialog');
-  if (!dialog || typeof dialog.showModal !== 'function') return;
-  const frame = dialog.querySelector('iframe');
-  const SWEATPALS = 'https://sweatpals.com';
-
-  const close = () => {
-    if (dialog.open) dialog.close();
-    document.documentElement.style.overflow = '';
-  };
-  dialog.addEventListener('close', () => {
-    document.documentElement.style.overflow = '';
-  });
-
-  document.querySelectorAll('[data-waitlist]').forEach((el) => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (!frame.src) frame.src = frame.dataset.src;
-      dialog.showModal();
-      document.documentElement.style.overflow = 'hidden';
-      if (typeof window.fbq === 'function') {
-        const section = el.closest('section');
-        window.fbq('trackCustom', 'WaitlistOpened', {
-          location: section ? section.id || 'unknown' : 'nav'
-        });
-      }
-    });
-  });
-
-  dialog.querySelector('[data-waitlist-close]')?.addEventListener('click', close);
-  // Click on the backdrop (outside the dialog box) closes it.
-  dialog.addEventListener('click', (e) => {
-    if (e.target === dialog) close();
-  });
-
-  // Mirror SweatPals' own widget: its success screen asks the host to close the
-  // popup, and it forwards signup conversions for the host page's Meta Pixel.
-  window.addEventListener('message', (e) => {
-    if ((e.origin || '').replace('//www.', '//') !== SWEATPALS) return;
-    const action = e.data && e.data.action;
-    if (typeof action !== 'string') return;
-    if (action.startsWith('closeEventDetails-')) close();
-    if (action === 'WIDGET_META_EVENT' && typeof window.fbq === 'function') {
-      window.fbq('track', e.data.eventName, e.data.eventParams || {});
+// Meta Pixel: Register CTA clicks. The links leave for SweatPals, so this is
+// the only place registration intent is recorded. (The LA site also called
+// window.amplitude, but no Amplitude snippet was ever loaded, so those events
+// were silently dropped. Removed rather than carried over.)
+document.querySelectorAll('[data-register]').forEach((el) => {
+  el.addEventListener('click', () => {
+    if (typeof window.fbq === 'function') {
+      const section = el.closest('section');
+      window.fbq('track', 'Lead', {
+        content_name: 'The Blend Vegas Register',
+        content_category: section ? section.id || 'unknown' : 'nav'
+      });
     }
   });
-})();
+});
